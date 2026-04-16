@@ -49,17 +49,19 @@ Mark tasks as done by changing `[ ]` to `[x]`.
 
 ---
 
-## Phase 5 – UI Layout (Mobile-First)
+## Phase 5 – UI Layout (Mobile-First, Penguin Theme)
 
-- [ ] `index.html`: add header with question counter and language toggle
+- [ ] `index.html`: add header with question counter, penguin mascot icon (🐧), and language toggle
 - [ ] `index.html`: add main area – large letter display + options grid + feedback message
-- [ ] `index.html`: add end-screen modal – hidden by default, contains reward image, message, restart button
+- [ ] `index.html`: add end-screen modal – hidden by default, contains large penguin (🐧 or `assets/images/penguin.gif`), reward message, restart button
 - [ ] `style.css`: base reset (`box-sizing`, `margin`, `padding`, font)
+- [ ] `style.css`: penguin color palette – background `#87CEEB` (sky blue) or `#E8F4FD`, accent `#4A90D9`, white cards, dark navy text
+- [ ] `style.css`: friendly rounded font – `ui-rounded` system font stack or Nunito (inline Google Fonts link)
 - [ ] `style.css`: layout – full-viewport, no scroll, flex/grid columns
 - [ ] `style.css`: letter display – centered, ≥ 5rem font size, prominent color
 - [ ] `style.css`: options grid – 2×2 layout, each cell ≥ 64×64px tap target
 - [ ] `style.css`: feedback message – distinct colors for correct (green) and wrong (orange/red)
-- [ ] `style.css`: end-screen modal – full-screen overlay, centered content, z-index above game
+- [ ] `style.css`: end-screen modal – full-screen overlay with ice-blue gradient, centered content, z-index above game
 - [ ] `style.css`: language toggle button – top-right corner, always visible
 - [ ] Verify: layout fits 375px viewport width with no horizontal scroll
 
@@ -87,8 +89,9 @@ Mark tasks as done by changing `[ ]` to `[x]`.
 
 ## Phase 8 – End Screen Polish
 
-- [ ] Add penguin emoji or animated GIF to end-screen modal (`assets/images/penguin.gif` or inline emoji 🐧)
-- [ ] End-screen message uses active language translation
+- [ ] Display large penguin as hero element: 🐧 emoji (≥ 5rem) or `assets/images/penguin.gif` if the file exists
+- [ ] End-screen message includes penguin emoji (e.g. "Hurra! 🐧" / "Hooray! 🐧") and uses active language translation
+- [ ] End-screen background uses ice-blue gradient matching the penguin theme
 - [ ] Restart button resets and starts a new game without page reload
 - [ ] Verify: end screen displays correctly on iPhone screen (no overflow, no scroll needed)
 

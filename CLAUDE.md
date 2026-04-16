@@ -6,7 +6,26 @@ This file provides instructions for the Claude Code agent working on this reposi
 
 ## Project Overview
 
-**Alfabet** is a bilingual (EN/PL) educational quiz game for children (~5 years old) learning the alphabet. It runs entirely in the browser with no backend and is hosted on GitHub Pages.
+**Alfabet** is a bilingual (EN/PL) educational quiz game designed specifically for a ~5-year-old girl who loves penguins. The game helps her learn the alphabet in a fun, penguin-themed environment. It runs entirely in the browser with no backend and is hosted on GitHub Pages.
+
+### Target User
+
+- **Age:** ~5 years old
+- **Gender:** girl
+- **Key interest:** penguins – the penguin is the central mascot of the game
+- **Device:** primarily iPhone/Safari (mobile-first)
+
+---
+
+## Visual Theme
+
+The entire look and feel must reflect the penguin theme:
+
+- **Color palette:** cool blues (`#4A90D9`, `#87CEEB`), whites, dark navy/black – inspired by penguin colors and icy Antarctic landscapes. Avoid aggressive reds or "generic" primary colors.
+- **Mascot:** a penguin character appears throughout the game – as a small icon in the header, as a decorative element on the question screen, and as the hero animation on the end screen.
+- **Tone:** warm, encouraging, and child-friendly. The penguin "reacts" to correct answers (emoji/animation).
+- **End screen:** the penguin takes center stage – use the 🐧 emoji or a `penguin.gif` placed in `assets/images/`. The reward message should feel like a celebration from the penguin.
+- **No generic game aesthetics** (no swords, no cars, no "gamer" fonts). Friendly rounded fonts and pastel/ice-blue tones only.
 
 ---
 
@@ -147,15 +166,21 @@ Labels must be provided in both languages.
 - **No tiny close buttons, no hover-only interactions.**
 - Question counter visible at all times (e.g. `3 / 10`).
 - Feedback message visible immediately after tap.
+- **Penguin mascot** visible in the header or alongside the letter – a small 🐧 icon keeps the theme consistent across all screens.
+- **Font choice:** use a friendly, rounded font (e.g. system `ui-rounded` or a Google Font like Nunito if inline-linked). Avoid serif or monospace fonts.
+- **Color palette** (see Visual Theme section above) – blues and whites throughout, no harsh contrasts.
 
 ---
 
 ## End Screen
 
 - Full-screen modal overlay (not a new page).
-- Contains: animated image (penguin GIF or emoji), reward message, restart button.
+- The penguin is the **hero** of this screen – use the 🐧 emoji (large, ≥ 5rem) or an animated `assets/images/penguin.gif`.
+- Reward message in the active language (e.g. "Hurra! 🐧" / "Hooray! 🐧").
+- Large, prominent restart button.
 - Sound: use `SpeechSynthesis API` to speak the reward message, or play an `.mp3` via `HTMLAudioElement`.
 - Do not navigate away from `index.html`.
+- The modal background should use the penguin-themed color palette (ice-blue gradient or similar).
 
 ---
 

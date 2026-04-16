@@ -1,8 +1,8 @@
 # Alfabet – Educational Alphabet Game
 
-An interactive browser-based quiz game that helps children (around 5 years old) learn the alphabet. Designed for mobile use on iPhone/Safari, deployable via GitHub Pages.
+An interactive browser-based quiz game that helps a ~5-year-old girl learn the alphabet. Designed specifically for a child who loves penguins – the penguin is the central mascot and visual theme throughout the entire game.
 
-The application is bilingual: **English (EN)** and **Polish (PL)**.
+The application is bilingual: **English (EN)** and **Polish (PL)**. Designed for mobile use on iPhone/Safari, deployable via GitHub Pages.
 
 ---
 
@@ -38,7 +38,9 @@ Optionally installable on iOS via "Add to Home Screen" for a PWA-like experience
 - 10-question quiz session per game
 - Each question displays a letter and 3–4 image/emoji options
 - Positive feedback for correct answers, retry prompt for wrong ones
-- Animated reward screen on game completion
+- Animated penguin reward screen on game completion
+- Penguin mascot visible throughout the game (header, end screen)
+- Ice-blue / Antarctic color palette designed for a girl who loves penguins
 - Bilingual support: English and Polish
 - No dependencies, no build tools required
 - Mobile-first layout optimized for iPhone/Safari
@@ -201,11 +203,11 @@ Designed for children around 5 years old on mobile devices.
 
 Displayed after 10 correct answers:
 
-- Modal / popup overlay
-- Animated penguin (GIF or image)
-- Message: "Hurra!" / "Hooray!"
+- Full-screen modal overlay with ice-blue/penguin-themed background
+- **Hero penguin** – large 🐧 emoji or animated `penguin.gif`
+- Celebratory message: "Hurra! 🐧" / "Hooray! 🐧"
 - Sound via `SpeechSynthesis API` or `<audio>` element
-- Restart button
+- Large restart button
 
 ---
 
