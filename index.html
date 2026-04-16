@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Alfabet 🐧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <header class="header">
+      <span id="counter" class="counter">1 / 10</span>
+      <span class="mascot" aria-hidden="true">🐧</span>
+      <button id="lang-btn" class="lang-btn" aria-label="Zmień język">EN</button>
+    </header>
+
+    <main id="game" class="game">
+      <div id="letter-display" class="letter-display" aria-live="polite">A</div>
+      <div id="options-grid" class="options-grid" role="group" aria-label="Opcje odpowiedzi"></div>
+      <div id="feedback" class="feedback" aria-live="assertive" aria-atomic="true"></div>
+    </main>
+
+    <div id="end-modal" class="end-modal hidden" role="dialog" aria-modal="true" aria-labelledby="end-message">
+      <div class="end-content">
+        <div class="end-penguin" aria-hidden="true">🐧</div>
+        <p id="end-message" class="end-message">Hurra!</p>
+        <button id="restart-btn" class="restart-btn">Zagraj ponownie</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* ─── Variables ─────────────────────────────────────────────── */
+:root {
+  --bg:           #dceefb;
+  --bg-deep:      #b8ddf7;
+  --card:         #ffffff;
+  --primary:      #4a90d9;
+  --primary-dark: #2c6fad;
+  --text:         #1a2e45;
+  --text-light:   #4a6785;
+  --correct:      #43a047;
+  --correct-bg:   #e8f5e9;
+  --wrong:        #e53935;
+  --wrong-bg:     #fdecea;
+  --shadow:       0 4px 16px rgba(42, 100, 170, 0.18);
+  --radius:       18px;
+  --font:         ui-rounded, "Hiragino Maru Gothic ProN", Nunito,
+                  Comfortaa, Helvetica, Arial, sans-serif;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font);
+  background: linear-gradient(160deg, var(--bg) 0%, var(--bg-deep) 100%);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* ─── App shell ──────────────────────────────────────────────── */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: env(safe-area-inset-top, 0) 16px env(safe-area-inset-bottom, 0);
+}
+
+/* ─── Header ─────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 6px;
+  flex-shrink: 0;
+}
+
+.counter {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  min-width: 60px;
+}
+
+.mascot {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lang-btn {
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--card);
+  background: var(--primary);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  min-width: 48px;
+  min-height: 36px;
+  transition: background 0.15s;
+}
+.lang-btn:active { background: var(--primary-dark); }
+
+/* ─── Game area ──────────────────────────────────────────────── */
+.game {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  min-height: 0;
+}
+
+/* ─── Letter display ─────────────────────────────────────────── */
+.letter-display {
+  font-size: clamp(5rem, 22vw, 8rem);
+  font-weight: 900;
+  color: var(--primary);
+  text-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.letter-display.fade-in {
+  animation: fadeIn 0.35s ease-out;
+}
+
+/* ─── Options grid ───────────────────────────────────────────── */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.option-btn {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--card);
+  border: 3px solid transparent;
+  border-radius: var(--radius);
+  padding: 14px 8px;
+  min-height: 96px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s, border-color 0.12s, background 0.12s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.option-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+.option-btn.correct {
+  border-color: var(--correct);
+  background: var(--correct-bg);
+  animation: pop 0.35s ease-out;
+}
+
+.option-btn.wrong {
+  border-color: var(--wrong);
+  background: var(--wrong-bg);
+  animation: shake 0.4s ease-out;
+}
+
+.option-img {
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  line-height: 1;
+}
+
+.option-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+/* ─── Feedback ───────────────────────────────────────────────── */
+.feedback {
+  font-size: 1.3rem;
+  font-weight: 700;
+  min-height: 2rem;
+  text-align: center;
+  padding: 4px 0;
+  transition: opacity 0.2s;
+}
+
+.feedback-correct { color: var(--correct); }
+.feedback-wrong   { color: var(--wrong); }
+
+/* ─── End modal ──────────────────────────────────────────────── */
+.end-modal {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(160deg, #bde0fa 0%, #7fc0ef 60%, #4a90d9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: modalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.end-modal.hidden {
+  display: none;
+}
+
+.end-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.end-penguin {
+  font-size: clamp(5rem, 22vw, 8rem);
+  animation: penguinBounce 1s ease-in-out infinite alternate;
+}
+
+.end-message {
+  font-size: clamp(1.6rem, 7vw, 2.4rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(30, 80, 140, 0.35);
+  max-width: 320px;
+}
+
+.restart-btn {
+  font-family: var(--font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(30, 80, 140, 0.25);
+  min-height: 64px;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.restart-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(30, 80, 140, 0.2);
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes penguinBounce {
+  from { transform: translateY(0) rotate(-5deg); }
+  to   { transform: translateY(-12px) rotate(5deg); }
+}
+
+/* ─── Landscape guard ────────────────────────────────────────── */
+@media (max-height: 500px) {
+  .letter-display { font-size: 3.5rem; }
+  .option-btn     { min-height: 72px; padding: 8px 6px; }
+  .end-penguin    { font-size: 3.5rem; }
+}
