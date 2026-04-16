@@ -239,7 +239,7 @@ const allQuestions = [
   {
     letter: 'Y',
     options: [
-      { img: '🧶', label: { en: 'Yarn',     pl: 'Włóczka'   }, correct: true  },
+      { img: '🪀', label: { en: 'Yo-yo',    pl: 'Yo-yo'     }, correct: true  },
       { img: '🐯', label: { en: 'Tiger',    pl: 'Tygrys'    }, correct: false },
       { img: '☀️', label: { en: 'Sun',      pl: 'Słońce'    }, correct: false },
       { img: '🎃', label: { en: 'Pumpkin',  pl: 'Dynia'     }, correct: false }
