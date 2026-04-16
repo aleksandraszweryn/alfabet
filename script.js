@@ -23,7 +23,7 @@ const allQuestions = [
   {
     letter: 'A',
     options: [
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: true  },
+      { img: '🐊', label: { en: 'Alligator', pl: 'Aligator'  }, correct: true  },
       { img: '🐶', label: { en: 'Dog',      pl: 'Pies'      }, correct: false },
       { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
       { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false }
@@ -59,7 +59,7 @@ const allQuestions = [
   {
     letter: 'E',
     options: [
-      { img: '🐘', label: { en: 'Elephant', pl: 'Słoń'      }, correct: true  },
+      { img: '🧝', label: { en: 'Elf',       pl: 'Elf'       }, correct: true  },
       { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: false },
       { img: '🍓', label: { en: 'Strawberry', pl: 'Truskawka' }, correct: false },
       { img: '🚀', label: { en: 'Rocket',   pl: 'Rakieta'   }, correct: false }
@@ -77,7 +77,7 @@ const allQuestions = [
   {
     letter: 'G',
     options: [
-      { img: '🍇', label: { en: 'Grapes',   pl: 'Winogrona' }, correct: true  },
+      { img: '🎸', label: { en: 'Guitar',    pl: 'Gitara'    }, correct: true  },
       { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
       { img: '🐱', label: { en: 'Cat',      pl: 'Kot'       }, correct: false },
       { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false }
@@ -86,7 +86,7 @@ const allQuestions = [
   {
     letter: 'H',
     options: [
-      { img: '🎩', label: { en: 'Hat',      pl: 'Kapelusz'  }, correct: true  },
+      { img: '🦛', label: { en: 'Hippo',     pl: 'Hipopotam' }, correct: true  },
       { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
       { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
       { img: '⭐',  label: { en: 'Star',     pl: 'Gwiazda'   }, correct: false }
@@ -95,7 +95,7 @@ const allQuestions = [
   {
     letter: 'I',
     options: [
-      { img: '🍦', label: { en: 'Ice cream', pl: 'Lody'     }, correct: true  },
+      { img: '🦎', label: { en: 'Iguana',    pl: 'Iguana'    }, correct: true  },
       { img: '🐸', label: { en: 'Frog',     pl: 'Żaba'      }, correct: false },
       { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false },
       { img: '🚗', label: { en: 'Car',      pl: 'Auto'      }, correct: false }
@@ -131,7 +131,7 @@ const allQuestions = [
   {
     letter: 'M',
     options: [
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: true  },
+      { img: '🐒', label: { en: 'Monkey',    pl: 'Małpa'     }, correct: true  },
       { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
       { img: '🍰', label: { en: 'Cake',     pl: 'Ciasto'    }, correct: false },
       { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false }
@@ -203,7 +203,7 @@ const allQuestions = [
   {
     letter: 'U',
     options: [
-      { img: '☂️', label: { en: 'Umbrella', pl: 'Parasol'   }, correct: true  },
+      { img: '🛸', label: { en: 'UFO',       pl: 'UFO'       }, correct: true  },
       { img: '🐱', label: { en: 'Cat',      pl: 'Kot'       }, correct: false },
       { img: '🦁', label: { en: 'Lion',     pl: 'Lew'       }, correct: false },
       { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false }
