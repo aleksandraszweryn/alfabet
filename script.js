@@ -2,262 +2,252 @@
 
 // ─── Translations ─────────────────────────────────────────────
 const translations = {
-  en: {
-    correct: 'Well done! 🐧',
-    wrong:   'Try again!',
-    end:     'Hooray! You are amazing! 🐧',
-    restart: 'Play again',
-    counter: (c, t) => `${c} / ${t}`
-  },
-  pl: {
-    correct: 'Brawo! 🐧',
-    wrong:   'Spróbuj jeszcze raz!',
-    end:     'Hurra! Jesteś wspaniała! 🐧',
-    restart: 'Zagraj ponownie',
-    counter: (c, t) => `${c} / ${t}`
-  }
+  correct: 'Brawo! 🐧',
+  wrong:   'Spróbuj jeszcze raz!',
+  end:     'Hurra! Jesteś wspaniała! 🐧',
+  restart: 'Zagraj ponownie',
+  counter: (c, t) => `${c} / ${t}`
 };
 
-// ─── Questions (A–Z) ──────────────────────────────────────────
+// ─── Questions (A–Ż) ──────────────────────────────────────────
 const allQuestions = [
   {
     letter: 'A',
     options: [
-      { img: '🐊', label: { en: 'Alligator', pl: 'Aligator'  }, correct: true  },
-      { img: '🐶', label: { en: 'Dog',      pl: 'Pies'      }, correct: false },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
-      { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false }
+      { img: '🐊', label: 'Aligator', correct: true  },
+      { img: '🐶', label: 'Pies',     correct: false },
+      { img: '🌙', label: 'Księżyc',  correct: false },
+      { img: '🎈', label: 'Balon',    correct: false }
     ]
   },
   {
     letter: 'B',
     options: [
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: true  },
-      { img: '🐱', label: { en: 'Cat',      pl: 'Kot'       }, correct: false },
-      { img: '⭐',  label: { en: 'Star',     pl: 'Gwiazda'   }, correct: false },
-      { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false }
+      { img: '🍌', label: 'Banan',   correct: true  },
+      { img: '🐱', label: 'Kot',     correct: false },
+      { img: '⭐',  label: 'Gwiazda', correct: false },
+      { img: '🌸', label: 'Kwiat',   correct: false }
     ]
   },
   {
     letter: 'C',
     options: [
-      { img: '🍰', label: { en: 'Cake',     pl: 'Ciasto'    }, correct: true  },
-      { img: '🐸', label: { en: 'Frog',     pl: 'Żaba'      }, correct: false },
-      { img: '🏠', label: { en: 'House',    pl: 'Dom'       }, correct: false },
-      { img: '🌈', label: { en: 'Rainbow',  pl: 'Tęcza'     }, correct: false }
+      { img: '🍰', label: 'Ciasto', correct: true  },
+      { img: '🐸', label: 'Żaba',   correct: false },
+      { img: '🏠', label: 'Dom',    correct: false },
+      { img: '🌈', label: 'Tęcza',  correct: false }
     ]
   },
   {
     letter: 'D',
     options: [
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: true  },
-      { img: '🦁', label: { en: 'Lion',     pl: 'Lew'       }, correct: false },
-      { img: '🍇', label: { en: 'Grapes',   pl: 'Winogrona' }, correct: false },
-      { img: '🚂', label: { en: 'Train',    pl: 'Pociąg'    }, correct: false }
+      { img: '🐬', label: 'Delfin',    correct: true  },
+      { img: '🦁', label: 'Lew',       correct: false },
+      { img: '🍇', label: 'Winogrona', correct: false },
+      { img: '🚂', label: 'Pociąg',    correct: false }
     ]
   },
   {
     letter: 'E',
     options: [
-      { img: '🧝', label: { en: 'Elf',       pl: 'Elf'       }, correct: true  },
-      { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: false },
-      { img: '🍓', label: { en: 'Strawberry', pl: 'Truskawka' }, correct: false },
-      { img: '🚀', label: { en: 'Rocket',   pl: 'Rakieta'   }, correct: false }
+      { img: '🧝', label: 'Elf',       correct: true  },
+      { img: '🐧', label: 'Pingwin',   correct: false },
+      { img: '🍓', label: 'Truskawka', correct: false },
+      { img: '🚀', label: 'Rakieta',   correct: false }
     ]
   },
   {
     letter: 'F',
     options: [
-      { img: '🚩', label: { en: 'Flag',     pl: 'Flaga'     }, correct: true  },
-      { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false },
-      { img: '🐘', label: { en: 'Elephant', pl: 'Słoń'      }, correct: false },
-      { img: '🚗', label: { en: 'Car',      pl: 'Auto'      }, correct: false }
+      { img: '🚩', label: 'Flaga', correct: true  },
+      { img: '🎈', label: 'Balon', correct: false },
+      { img: '🐘', label: 'Słoń',  correct: false },
+      { img: '🚗', label: 'Auto',  correct: false }
     ]
   },
   {
     letter: 'G',
     options: [
-      { img: '🎸', label: { en: 'Guitar',    pl: 'Gitara'    }, correct: true  },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
-      { img: '🐱', label: { en: 'Cat',      pl: 'Kot'       }, correct: false },
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false }
+      { img: '🎸', label: 'Gitara',  correct: true  },
+      { img: '🌙', label: 'Księżyc', correct: false },
+      { img: '🐱', label: 'Kot',     correct: false },
+      { img: '🍌', label: 'Banan',   correct: false }
     ]
   },
   {
     letter: 'H',
     options: [
-      { img: '🦛', label: { en: 'Hippo',     pl: 'Hipopotam' }, correct: true  },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
-      { img: '⭐',  label: { en: 'Star',     pl: 'Gwiazda'   }, correct: false }
+      { img: '🦛', label: 'Hipopotam', correct: true  },
+      { img: '🍎', label: 'Jabłko',    correct: false },
+      { img: '🐬', label: 'Delfin',    correct: false },
+      { img: '⭐',  label: 'Gwiazda',   correct: false }
     ]
   },
   {
     letter: 'I',
     options: [
-      { img: '🦎', label: { en: 'Iguana',    pl: 'Iguana'    }, correct: true  },
-      { img: '🐸', label: { en: 'Frog',     pl: 'Żaba'      }, correct: false },
-      { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false },
-      { img: '🚗', label: { en: 'Car',      pl: 'Auto'      }, correct: false }
+      { img: '🦎', label: 'Iguana', correct: true  },
+      { img: '🐸', label: 'Żaba',   correct: false },
+      { img: '🌸', label: 'Kwiat',  correct: false },
+      { img: '🚗', label: 'Auto',   correct: false }
     ]
   },
   {
     letter: 'J',
     options: [
-      { img: '🐆', label: { en: 'Jaguar',   pl: 'Jaguar'    }, correct: true  },
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
-      { img: '🌈', label: { en: 'Rainbow',  pl: 'Tęcza'     }, correct: false }
+      { img: '🐆', label: 'Jaguar',  correct: true  },
+      { img: '🍌', label: 'Banan',   correct: false },
+      { img: '🌙', label: 'Księżyc', correct: false },
+      { img: '🌈', label: 'Tęcza',   correct: false }
     ]
   },
   {
     letter: 'K',
     options: [
-      { img: '👑', label: { en: 'King',     pl: 'Król'      }, correct: true  },
-      { img: '🐸', label: { en: 'Frog',     pl: 'Żaba'      }, correct: false },
-      { img: '🍦', label: { en: 'Ice cream', pl: 'Lody'     }, correct: false },
-      { img: '🚂', label: { en: 'Train',    pl: 'Pociąg'    }, correct: false }
+      { img: '👑', label: 'Król',   correct: true  },
+      { img: '🐸', label: 'Żaba',   correct: false },
+      { img: '🍦', label: 'Lody',   correct: false },
+      { img: '🚂', label: 'Pociąg', correct: false }
     ]
   },
   {
     letter: 'L',
     options: [
-      { img: '🦁', label: { en: 'Lion',     pl: 'Lew'       }, correct: true  },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🚗', label: { en: 'Car',      pl: 'Auto'      }, correct: false },
-      { img: '🎃', label: { en: 'Pumpkin',  pl: 'Dynia'     }, correct: false }
+      { img: '🦁', label: 'Lew',    correct: true  },
+      { img: '🍎', label: 'Jabłko', correct: false },
+      { img: '🚗', label: 'Auto',   correct: false },
+      { img: '🎃', label: 'Dynia',  correct: false }
+    ]
+  },
+  {
+    letter: 'Ł',
+    options: [
+      { img: '🦢', label: 'Łabędź', correct: true  },
+      { img: '🐸', label: 'Żaba',   correct: false },
+      { img: '🍰', label: 'Ciasto', correct: false },
+      { img: '🌈', label: 'Tęcza',  correct: false }
     ]
   },
   {
     letter: 'M',
     options: [
-      { img: '🐒', label: { en: 'Monkey',    pl: 'Małpa'     }, correct: true  },
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
-      { img: '🍰', label: { en: 'Cake',     pl: 'Ciasto'    }, correct: false },
-      { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false }
+      { img: '🐒', label: 'Małpa',  correct: true  },
+      { img: '🐬', label: 'Delfin', correct: false },
+      { img: '🍰', label: 'Ciasto', correct: false },
+      { img: '🌸', label: 'Kwiat',  correct: false }
     ]
   },
   {
     letter: 'N',
     options: [
-      { img: '🎵', label: { en: 'Note',     pl: 'Nuta'      }, correct: true  },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
-      { img: '👑', label: { en: 'King',     pl: 'Król'      }, correct: false }
+      { img: '🎵', label: 'Nuta',   correct: true  },
+      { img: '🍎', label: 'Jabłko', correct: false },
+      { img: '🐬', label: 'Delfin', correct: false },
+      { img: '👑', label: 'Król',   correct: false }
     ]
   },
   {
     letter: 'O',
     options: [
-      { img: '🐙', label: { en: 'Octopus',  pl: 'Ośmiornica' }, correct: true  },
-      { img: '🦁', label: { en: 'Lion',     pl: 'Lew'       }, correct: false },
-      { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false },
-      { img: '⭐',  label: { en: 'Star',     pl: 'Gwiazda'   }, correct: false }
+      { img: '🐙', label: 'Ośmiornica', correct: true  },
+      { img: '🦁', label: 'Lew',        correct: false },
+      { img: '🎈', label: 'Balon',      correct: false },
+      { img: '⭐',  label: 'Gwiazda',    correct: false }
     ]
   },
   {
     letter: 'P',
     options: [
-      { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: true  },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
-      { img: '🚗', label: { en: 'Car',      pl: 'Auto'      }, correct: false }
-    ]
-  },
-  {
-    letter: 'Q',
-    options: [
-      { img: '👸', label: { en: 'Queen',    pl: 'Królowa'   }, correct: true  },
-      { img: '🐸', label: { en: 'Frog',     pl: 'Żaba'      }, correct: false },
-      { img: '🍰', label: { en: 'Cake',     pl: 'Ciasto'    }, correct: false },
-      { img: '🌈', label: { en: 'Rainbow',  pl: 'Tęcza'     }, correct: false }
+      { img: '🐧', label: 'Pingwin', correct: true  },
+      { img: '🍎', label: 'Jabłko',  correct: false },
+      { img: '🌙', label: 'Księżyc', correct: false },
+      { img: '🚗', label: 'Auto',    correct: false }
     ]
   },
   {
     letter: 'R',
     options: [
-      { img: '🚀', label: { en: 'Rocket',   pl: 'Rakieta'   }, correct: true  },
-      { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: false },
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false },
-      { img: '🎃', label: { en: 'Pumpkin',  pl: 'Dynia'     }, correct: false }
+      { img: '🚀', label: 'Rakieta', correct: true  },
+      { img: '🐧', label: 'Pingwin', correct: false },
+      { img: '🍌', label: 'Banan',   correct: false },
+      { img: '🎃', label: 'Dynia',   correct: false }
     ]
   },
   {
     letter: 'S',
     options: [
-      { img: '☀️', label: { en: 'Sun',      pl: 'Słońce'    }, correct: true  },
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🎩', label: { en: 'Hat',      pl: 'Kapelusz'  }, correct: false }
+      { img: '☀️', label: 'Słońce',   correct: true  },
+      { img: '🐬', label: 'Delfin',   correct: false },
+      { img: '🍎', label: 'Jabłko',   correct: false },
+      { img: '🎩', label: 'Kapelusz', correct: false }
     ]
   },
   {
     letter: 'T',
     options: [
-      { img: '🐯', label: { en: 'Tiger',    pl: 'Tygrys'    }, correct: true  },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false },
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false },
-      { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false }
+      { img: '🐯', label: 'Tygrys',  correct: true  },
+      { img: '🌙', label: 'Księżyc', correct: false },
+      { img: '🍌', label: 'Banan',   correct: false },
+      { img: '🌸', label: 'Kwiat',   correct: false }
     ]
   },
   {
     letter: 'U',
     options: [
-      { img: '🛸', label: { en: 'UFO',       pl: 'UFO'       }, correct: true  },
-      { img: '🐱', label: { en: 'Cat',      pl: 'Kot'       }, correct: false },
-      { img: '🦁', label: { en: 'Lion',     pl: 'Lew'       }, correct: false },
-      { img: '🎈', label: { en: 'Balloon',  pl: 'Balon'     }, correct: false }
+      { img: '🛸', label: 'UFO',   correct: true  },
+      { img: '🐱', label: 'Kot',   correct: false },
+      { img: '🦁', label: 'Lew',   correct: false },
+      { img: '🎈', label: 'Balon', correct: false }
     ]
   },
   {
     letter: 'V',
     options: [
-      { img: '🎻', label: { en: 'Violin',   pl: 'Skrzypce'  }, correct: true  },
-      { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: false },
-      { img: '☀️', label: { en: 'Sun',      pl: 'Słońce'    }, correct: false },
-      { img: '🍇', label: { en: 'Grapes',   pl: 'Winogrona' }, correct: false }
+      { img: '🎻', label: 'Viola',     correct: true  },
+      { img: '🐧', label: 'Pingwin',   correct: false },
+      { img: '☀️', label: 'Słońce',    correct: false },
+      { img: '🍇', label: 'Winogrona', correct: false }
     ]
   },
   {
     letter: 'W',
     options: [
-      { img: '🐺', label: { en: 'Wolf',     pl: 'Wilk'      }, correct: true  },
-      { img: '🌈', label: { en: 'Rainbow',  pl: 'Tęcza'     }, correct: false },
-      { img: '🍦', label: { en: 'Ice cream', pl: 'Lody'     }, correct: false },
-      { img: '🎵', label: { en: 'Note',     pl: 'Nuta'      }, correct: false }
-    ]
-  },
-  {
-    letter: 'X',
-    options: [
-      { img: '🩻', label: { en: 'X-ray',    pl: 'Rentgen'   }, correct: true  },
-      { img: '🐧', label: { en: 'Penguin',  pl: 'Pingwin'   }, correct: false },
-      { img: '🍌', label: { en: 'Banana',   pl: 'Banan'     }, correct: false },
-      { img: '🌙', label: { en: 'Moon',     pl: 'Księżyc'   }, correct: false }
+      { img: '🐺', label: 'Wilk',  correct: true  },
+      { img: '🌈', label: 'Tęcza', correct: false },
+      { img: '🍦', label: 'Lody',  correct: false },
+      { img: '🎵', label: 'Nuta',  correct: false }
     ]
   },
   {
     letter: 'Y',
     options: [
-      { img: '🪀', label: { en: 'Yo-yo',    pl: 'Yo-yo'     }, correct: true  },
-      { img: '🐯', label: { en: 'Tiger',    pl: 'Tygrys'    }, correct: false },
-      { img: '☀️', label: { en: 'Sun',      pl: 'Słońce'    }, correct: false },
-      { img: '🎃', label: { en: 'Pumpkin',  pl: 'Dynia'     }, correct: false }
+      { img: '🪀', label: 'Yo-yo',  correct: true  },
+      { img: '🐯', label: 'Tygrys', correct: false },
+      { img: '☀️', label: 'Słońce', correct: false },
+      { img: '🎃', label: 'Dynia',  correct: false }
     ]
   },
   {
     letter: 'Z',
     options: [
-      { img: '🦓', label: { en: 'Zebra',    pl: 'Zebra'     }, correct: true  },
-      { img: '🍎', label: { en: 'Apple',    pl: 'Jabłko'    }, correct: false },
-      { img: '🐬', label: { en: 'Dolphin',  pl: 'Delfin'    }, correct: false },
-      { img: '🌸', label: { en: 'Flower',   pl: 'Kwiat'     }, correct: false }
+      { img: '🦓', label: 'Zebra',  correct: true  },
+      { img: '🍎', label: 'Jabłko', correct: false },
+      { img: '🐬', label: 'Delfin', correct: false },
+      { img: '🌸', label: 'Kwiat',  correct: false }
+    ]
+  },
+  {
+    letter: 'Ż',
+    options: [
+      { img: '🦒', label: 'Żyrafa',  correct: true  },
+      { img: '🐧', label: 'Pingwin', correct: false },
+      { img: '🍌', label: 'Banan',   correct: false },
+      { img: '🌙', label: 'Księżyc', correct: false }
     ]
   }
 ];
 
 // ─── State ────────────────────────────────────────────────────
-let currentLang          = 'pl';
 let currentQuestionIndex = 0;
 let sessionQuestions     = [];
 let isAnswering          = false;
@@ -277,7 +267,7 @@ function speak(text) {
     if (!window.speechSynthesis) return;
     window.speechSynthesis.cancel();
     const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = currentLang === 'pl' ? 'pl-PL' : 'en-US';
+    utt.lang = 'pl-PL';
     window.speechSynthesis.speak(utt);
   } catch (_) {
     // audio failure must not break the game
@@ -300,11 +290,10 @@ function startSession() {
 function loadQuestion() {
   isAnswering = false;
   const q = sessionQuestions[currentQuestionIndex];
-  const t = translations[currentLang];
 
   // Counter
   document.getElementById('counter').textContent =
-    t.counter(currentQuestionIndex + 1, 10);
+    translations.counter(currentQuestionIndex + 1, 10);
 
   // Letter with fade-in animation
   const letterEl = document.getElementById('letter-display');
@@ -321,7 +310,7 @@ function loadQuestion() {
     btn.className = 'option-btn';
     btn.innerHTML = `
       <span class="option-img">${option.img}</span>
-      <span class="option-label">${option.label[currentLang]}</span>
+      <span class="option-label">${option.label}</span>
     `;
     btn.addEventListener('click', () => checkAnswer(option, btn));
     grid.appendChild(btn);
@@ -337,7 +326,6 @@ function checkAnswer(option, el) {
   if (isAnswering) return;
   isAnswering = true;
 
-  const t  = translations[currentLang];
   const fb = document.getElementById('feedback');
 
   // Disable all buttons to prevent double-tap
@@ -345,13 +333,13 @@ function checkAnswer(option, el) {
 
   if (option.correct) {
     el.classList.add('correct');
-    fb.textContent = t.correct;
+    fb.textContent = translations.correct;
     fb.className = 'feedback feedback-correct';
-    speakClean(t.correct);
+    speakClean(translations.correct);
     setTimeout(nextQuestion, 800);
   } else {
     el.classList.add('wrong');
-    fb.textContent = t.wrong;
+    fb.textContent = translations.wrong;
     fb.className = 'feedback feedback-wrong';
     setTimeout(() => {
       document.querySelectorAll('.option-btn').forEach(btn => {
@@ -375,11 +363,10 @@ function nextQuestion() {
 }
 
 function endGame() {
-  const t = translations[currentLang];
-  document.getElementById('end-message').textContent = t.end;
-  document.getElementById('restart-btn').textContent = t.restart;
+  document.getElementById('end-message').textContent = translations.end;
+  document.getElementById('restart-btn').textContent = translations.restart;
   document.getElementById('end-modal').classList.remove('hidden');
-  speakClean(t.end);
+  speakClean(translations.end);
 }
 
 function restartGame() {
@@ -388,27 +375,7 @@ function restartGame() {
   loadQuestion();
 }
 
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  document.getElementById('lang-btn').textContent = lang === 'pl' ? 'EN' : 'PL';
-
-  const modal = document.getElementById('end-modal');
-  if (!modal.classList.contains('hidden')) {
-    // Update end screen texts without restarting
-    const t = translations[lang];
-    document.getElementById('end-message').textContent = t.end;
-    document.getElementById('restart-btn').textContent = t.restart;
-  } else {
-    loadQuestion();
-  }
-}
-
 // ─── Event listeners ──────────────────────────────────────────
-document.getElementById('lang-btn').addEventListener('click', () => {
-  setLanguage(currentLang === 'pl' ? 'en' : 'pl');
-});
-
 document.getElementById('restart-btn').addEventListener('click', restartGame);
 
 // ─── Init ─────────────────────────────────────────────────────

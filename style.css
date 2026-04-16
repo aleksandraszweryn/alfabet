@@ -68,22 +68,6 @@ body {
   line-height: 1;
 }
 
-.lang-btn {
-  font-family: var(--font);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--card);
-  background: var(--primary);
-  border: none;
-  border-radius: 20px;
-  padding: 6px 14px;
-  cursor: pointer;
-  min-width: 48px;
-  min-height: 36px;
-  transition: background 0.15s;
-}
-.lang-btn:active { background: var(--primary-dark); }
-
 /* ─── Game area ──────────────────────────────────────────────── */
 .game {
   flex: 1;
