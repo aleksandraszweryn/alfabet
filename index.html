@@ -9,11 +9,55 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cartoon penguin – defined once, reused in header and end screen via <use href="#penguin"> -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="penguin" viewBox="0 0 100 132">
+        <!-- drop shadow -->
+        <ellipse cx="50" cy="129" rx="20" ry="4" fill="rgba(0,0,0,0.1)"/>
+        <!-- feet (drawn before body so body partially overlaps their tops) -->
+        <ellipse cx="36" cy="122" rx="12" ry="5" fill="#FF8C00" transform="rotate(-18 36 122)"/>
+        <ellipse cx="64" cy="122" rx="12" ry="5" fill="#FF8C00" transform="rotate(18 64 122)"/>
+        <!-- wings (behind body) -->
+        <ellipse cx="18" cy="84" rx="11" ry="22" fill="#14142a" transform="rotate(-14 18 84)"/>
+        <ellipse cx="82" cy="84" rx="11" ry="22" fill="#14142a" transform="rotate(14 82 84)"/>
+        <!-- body -->
+        <ellipse cx="50" cy="88" rx="26" ry="34" fill="#1a1a2e"/>
+        <!-- belly -->
+        <ellipse cx="50" cy="93" rx="17" ry="25" fill="#f0f0f0"/>
+        <!-- head -->
+        <circle cx="50" cy="44" r="24" fill="#1a1a2e"/>
+        <!-- face patch -->
+        <ellipse cx="50" cy="48" rx="15" ry="14" fill="#f0f0f0"/>
+        <!-- left eye: white, dark pupil, shine -->
+        <circle cx="43" cy="41" r="6" fill="white"/>
+        <circle cx="43.5" cy="41.5" r="3.8" fill="#0d0d1a"/>
+        <circle cx="44.5" cy="40.5" r="1.4" fill="white"/>
+        <!-- right eye -->
+        <circle cx="57" cy="41" r="6" fill="white"/>
+        <circle cx="56.5" cy="41.5" r="3.8" fill="#0d0d1a"/>
+        <circle cx="55.5" cy="40.5" r="1.4" fill="white"/>
+        <!-- beak (upper triangle + lower line) -->
+        <path d="M47 51 L50 58 L53 51 Q50 49 47 51 Z" fill="#FF8C00"/>
+        <line x1="47.5" y1="54.5" x2="52.5" y2="54.5" stroke="#cc6600" stroke-width="0.8"/>
+        <!-- pink blush cheeks -->
+        <circle cx="36" cy="50" r="5.5" fill="#FFB6C1" opacity="0.65"/>
+        <circle cx="64" cy="50" r="5.5" fill="#FFB6C1" opacity="0.65"/>
+        <!-- pink hair bow (top-right of head) -->
+        <path d="M62 22 Q56 15 53 19 Q56 27 62 22 Z" fill="#FF69B4"/>
+        <path d="M62 22 Q68 15 71 19 Q68 27 62 22 Z" fill="#FF69B4"/>
+        <circle cx="62" cy="22" r="3.8" fill="#FF1493"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <div id="app">
 
     <header class="header">
       <span id="counter" class="counter">1 / 10</span>
-      <span class="mascot" aria-hidden="true">🐧</span>
+      <svg class="mascot" viewBox="0 0 100 132" focusable="false" aria-hidden="true">
+        <use href="#penguin"/>
+      </svg>
     </header>
 
     <main id="game" class="game">
@@ -24,7 +68,9 @@
 
     <div id="end-modal" class="end-modal hidden" role="dialog" aria-modal="true" aria-labelledby="end-message">
       <div class="end-content">
-        <div class="end-penguin" aria-hidden="true">🐧</div>
+        <svg class="end-penguin" viewBox="0 0 100 132" focusable="false" aria-hidden="true">
+          <use href="#penguin"/>
+        </svg>
         <p id="end-message" class="end-message">Hurra!</p>
         <button id="restart-btn" class="restart-btn">Zagraj ponownie</button>
       </div>

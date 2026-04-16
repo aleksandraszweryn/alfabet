@@ -1,17 +1,17 @@
 /* ─── Variables ─────────────────────────────────────────────── */
 :root {
-  --bg:           #dceefb;
-  --bg-deep:      #b8ddf7;
+  --bg:           #fce4f5;
+  --bg-deep:      #c8a8e8;
   --card:         #ffffff;
-  --primary:      #4a90d9;
-  --primary-dark: #2c6fad;
-  --text:         #1a2e45;
-  --text-light:   #4a6785;
+  --primary:      #9b5fc0;
+  --primary-dark: #7b3fa0;
+  --text:         #2d1b45;
+  --text-light:   #7b5e9e;
   --correct:      #43a047;
   --correct-bg:   #e8f5e9;
   --wrong:        #e53935;
   --wrong-bg:     #fdecea;
-  --shadow:       0 4px 16px rgba(42, 100, 170, 0.18);
+  --shadow:       0 4px 16px rgba(155, 95, 192, 0.2);
   --radius:       18px;
   --font:         ui-rounded, "Hiragino Maru Gothic ProN", Nunito,
                   Comfortaa, Helvetica, Arial, sans-serif;
@@ -31,7 +31,7 @@ html, body {
 
 body {
   font-family: var(--font);
-  background: linear-gradient(160deg, var(--bg) 0%, var(--bg-deep) 100%);
+  background: linear-gradient(160deg, #fce4f5 0%, #e8c4f0 35%, #c8a8e8 65%, #a8c8f8 100%);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -64,8 +64,9 @@ body {
 }
 
 .mascot {
-  font-size: 2rem;
-  line-height: 1;
+  width: 46px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 /* ─── Game area ──────────────────────────────────────────────── */
@@ -84,7 +85,7 @@ body {
   font-size: clamp(5rem, 22vw, 8rem);
   font-weight: 900;
   color: var(--primary);
-  text-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+  text-shadow: 0 4px 12px rgba(155, 95, 192, 0.3);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -168,7 +169,7 @@ body {
 .end-modal {
   position: fixed;
   inset: 0;
-  background: linear-gradient(160deg, #bde0fa 0%, #7fc0ef 60%, #4a90d9 100%);
+  background: linear-gradient(160deg, #fce4f5 0%, #e0b0f0 40%, #b87de0 70%, #9b5fc0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +191,8 @@ body {
 }
 
 .end-penguin {
-  font-size: clamp(5rem, 22vw, 8rem);
+  width: clamp(110px, 42vw, 190px);
+  height: auto;
   animation: penguinBounce 1s ease-in-out infinite alternate;
 }
 
@@ -256,5 +258,5 @@ body {
 @media (max-height: 500px) {
   .letter-display { font-size: 3.5rem; }
   .option-btn     { min-height: 72px; padding: 8px 6px; }
-  .end-penguin    { font-size: 3.5rem; }
+  .end-penguin    { width: 90px; }
 }

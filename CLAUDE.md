@@ -19,13 +19,13 @@ This file provides instructions for the Claude Code agent working on this reposi
 
 ## Visual Theme
 
-The entire look and feel must reflect the penguin theme:
+The entire look and feel must reflect the penguin theme adapted for a young girl:
 
-- **Color palette:** cool blues (`#4A90D9`, `#87CEEB`), whites, dark navy/black – inspired by penguin colors and icy Antarctic landscapes. Avoid aggressive reds or "generic" primary colors.
-- **Mascot:** a penguin character appears throughout the game – as a small icon in the header, as a decorative element on the question screen, and as the hero animation on the end screen.
+- **Color palette:** girl-friendly pinks and purples blended with icy blues. The background gradient transitions from light pink (`#fce4f5`) through lavender (`#e8c4f0`) and medium purple (`#c8a8e8`) to a hint of ice-blue (`#a8c8f8`). The primary accent color is purple (`#9b5fc0`). Whites and dark navy/black are reserved for the penguin mascot itself. Avoid aggressive reds or "generic" primary colors.
+- **Mascot:** a cartoon SVG penguin (fully visible from the front, classic cartoon style) is defined inline in `index.html` as a `<symbol id="penguin">` and referenced with `<use href="#penguin">` in both the header (small) and the end screen (large hero). The penguin has: dark navy body, white belly/face, orange beak and webbed feet, pink blush cheeks, and a pink hair bow (`#FF69B4`/`#FF1493`) on the top-right of its head.
 - **Tone:** warm, encouraging, and child-friendly. The penguin "reacts" to correct answers (emoji/animation).
-- **End screen:** the penguin takes center stage – use the 🐧 emoji or a `penguin.gif` placed in `assets/images/`. The reward message should feel like a celebration from the penguin.
-- **No generic game aesthetics** (no swords, no cars, no "gamer" fonts). Friendly rounded fonts and pastel/ice-blue tones only.
+- **End screen:** the cartoon penguin SVG takes center stage (large, animated with `penguinBounce`). The modal uses a pink-to-purple gradient. The reward message should feel like a celebration.
+- **No generic game aesthetics** (no swords, no cars, no "gamer" fonts). Friendly rounded fonts and girl-friendly pink/purple/ice-blue tones only.
 
 ---
 
